@@ -1,7 +1,7 @@
 .hero {
   position: relative;
-  height: 80vh;
-  min-height: 500px;
+  height: 85vh;
+  min-height: 480px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -55,6 +55,7 @@
 
 .info {
   max-width: 600px;
+  width: 100%;
 }
 
 .info h1 {
@@ -121,17 +122,56 @@
   transform: scale(1.2);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .info h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+  }
+  .overview {
+    font-size: 1rem;
+    -webkit-line-clamp: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: 100svh;
+  }
+  .info h1 {
+    font-size: 2.2rem;
   }
   .content {
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 100px;
+    padding-top: 90px;
+    padding-bottom: var(--space-xl);
+    justify-content: flex-end;
   }
   .indicators {
-    margin-top: var(--space-lg);
+    margin-top: var(--space-md);
     align-self: center;
+  }
+  .overview {
+    -webkit-line-clamp: 3;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .info h1 {
+    font-size: 1.8rem;
+  }
+  .meta {
+    font-size: 0.95rem;
+  }
+  .button {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+  .overview {
+    -webkit-line-clamp: 2;
+    font-size: 0.9rem;
   }
 }

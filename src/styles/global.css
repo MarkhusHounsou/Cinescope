@@ -89,3 +89,33 @@ input:focus, select:focus {
   outline: 2px solid var(--color-accent-hover);
   outline-offset: 2px;
 }
+
+/* ===== Page layouts ===== */
+.pageMain {
+  padding: var(--space-xl) var(--space-lg) !important;
+}
+
+/* Titres de section responsive */
+.pageMain h2,
+main h2 {
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  margin-bottom: var(--space-lg);
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .pageMain,
+  main[style] {
+    padding-left: var(--space-sm) !important;
+    padding-right: var(--space-sm) !important;
+    padding-top: var(--space-lg) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageMain,
+  main[style] {
+    padding-left: var(--space-xs) !important;
+    padding-right: var(--space-xs) !important;
+  }
+}

@@ -19,6 +19,7 @@
 .section select,
 .section input[type="range"] {
   width: 100%;
+  max-width: 400px;
 }
 
 .chips {
@@ -35,6 +36,7 @@
   padding: 0.4rem 0.8rem;
   font-size: 0.9rem;
   transition: all var(--transition-fast);
+  white-space: nowrap;
 }
 
 .chip:hover {
@@ -49,17 +51,57 @@
 }
 
 .resetBtn {
-  margin-top: var(--space-md);
-  padding: var(--space-sm);
+  align-self: flex-start;
+  padding: var(--space-xs) var(--space-sm);
   border: 1px solid var(--color-accent);
   color: var(--color-accent);
   border-radius: var(--radius-md);
   text-transform: uppercase;
   font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
   transition: all var(--transition-normal);
 }
 
 .resetBtn:hover {
   background-color: var(--color-accent);
   color: var(--color-text);
+}
+
+@media (max-width: 600px) {
+  .filterBar {
+    padding: var(--space-sm);
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+  }
+
+  .section select,
+  .section input[type="range"] {
+    max-width: 100%;
+  }
+
+  .chips {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .chips::-webkit-scrollbar {
+    display: none;
+  }
+
+  .chip {
+    flex-shrink: 0;
+    font-size: 0.82rem;
+    padding: 0.35rem 0.7rem;
+  }
+
+  .resetBtn {
+    width: 100%;
+    text-align: center;
+    align-self: stretch;
+  }
 }

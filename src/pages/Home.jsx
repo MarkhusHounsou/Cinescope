@@ -44,7 +44,7 @@ const Home = () => {
     <>
       <HeroSection onMovieSelect={(id) => setSelectedMovie(id)} />
       
-      <main style={{ maxWidth: '1400px', margin: '0 auto', padding: 'var(--space-xl) var(--space-lg)', minHeight: '50vh' }}>
+      <main style={{ maxWidth: '1400px', margin: '0 auto', padding: 'var(--space-xl) var(--space-lg)', minHeight: '50vh' }} className="pageMain">
         <h2 style={{ fontSize: '2.5rem', marginBottom: 'var(--space-lg)', color: 'var(--color-text)' }}>
           Films Populaires
         </h2>

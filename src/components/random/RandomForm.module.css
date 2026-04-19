@@ -12,7 +12,7 @@
   color: var(--color-accent);
   text-align: center;
   margin-bottom: var(--space-xl);
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
 }
 
 .group {
@@ -24,7 +24,7 @@
   margin-bottom: var(--space-sm);
   color: var(--color-text);
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .chips {
@@ -38,7 +38,8 @@
   color: var(--color-muted);
   border: 1px solid var(--color-border);
   border-radius: 20px;
-  padding: 0.5rem 1rem;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.88rem;
   transition: all var(--transition-fast);
 }
 
@@ -55,6 +56,7 @@
 
 input[type="range"] {
   width: 100%;
+  accent-color: var(--color-accent);
 }
 
 .inputNumber {
@@ -73,15 +75,48 @@ input[type="range"] {
   background-color: var(--color-accent);
   color: var(--color-text);
   font-family: inherit;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   border-radius: var(--radius-md);
   margin-top: var(--space-xl);
   transition: all var(--transition-normal);
+  letter-spacing: 1px;
 }
 
 .submitBtn:hover {
   background-color: var(--color-accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(193, 18, 31, 0.4);
+  box-shadow: 0 4px 20px rgba(193, 18, 31, 0.4);
+}
+
+@media (max-width: 600px) {
+  .form {
+    padding: var(--space-md) var(--space-sm);
+    border-radius: var(--radius-md);
+  }
+
+  .chips {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .chips::-webkit-scrollbar {
+    display: none;
+  }
+
+  .chip {
+    flex-shrink: 0;
+  }
+
+  .inputNumber {
+    max-width: 100%;
+  }
+
+  .submitBtn {
+    font-size: 1rem;
+    margin-top: var(--space-lg);
+  }
 }

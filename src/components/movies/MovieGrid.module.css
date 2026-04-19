@@ -16,21 +16,34 @@
   margin-top: var(--space-lg);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
+  }
+}
+
+@media (max-width: 500px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-sm);
+    gap: var(--space-xs);
+  }
+
+  .endMessage, .emptyMessage {
+    font-size: 1rem;
+    padding: var(--space-lg);
   }
 }
