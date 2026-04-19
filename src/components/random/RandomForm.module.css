@@ -1,0 +1,87 @@
+.form {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  color: var(--color-accent);
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  font-size: 2.5rem;
+}
+
+.group {
+  margin-bottom: var(--space-lg);
+}
+
+.group label {
+  display: block;
+  margin-bottom: var(--space-sm);
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.chip {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--color-muted);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  transition: all var(--transition-fast);
+}
+
+.chip:hover {
+  border-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+.chip.active {
+  background-color: var(--color-blue);
+  color: var(--color-text);
+  border-color: var(--color-blue);
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+.inputNumber {
+  width: 100%;
+  max-width: 200px;
+  padding: 0.8rem;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  border-radius: var(--radius-md);
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  margin-top: var(--space-xl);
+  transition: all var(--transition-normal);
+}
+
+.submitBtn:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(193, 18, 31, 0.4);
+}

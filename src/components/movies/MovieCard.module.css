@@ -1,0 +1,132 @@
+.card {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  cursor: pointer;
+  background-color: var(--color-surface);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--color-border);
+}
+
+.posterContainer {
+  position: relative;
+  aspect-ratio: 2/3;
+  width: 100%;
+}
+
+.poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.card:hover .poster {
+  transform: scale(1.05);
+}
+
+.noPoster {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-surface);
+  color: var(--color-muted);
+}
+
+.noPoster span {
+  font-size: 3rem;
+  margin-bottom: var(--space-sm);
+}
+
+.badges {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 2;
+}
+
+.badgeNew, .badgeTop {
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.badgeNew {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+.badgeTop {
+  background-color: var(--color-gold);
+  color: #000;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(8, 6, 8, 1) 0%,
+    rgba(21, 12, 14, 0.9) 40%,
+    rgba(21, 12, 14, 0.4) 100%
+  );
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.title {
+  color: var(--color-text);
+  font-size: 1.2rem;
+  margin-bottom: var(--space-xs);
+  line-height: 1.2;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+  font-size: 0.9rem;
+}
+
+.year {
+  color: var(--color-muted);
+}
+
+.rating {
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.overview {
+  color: var(--color-text);
+  font-size: 0.85rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  opacity: 0.8;
+}

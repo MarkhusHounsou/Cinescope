@@ -1,0 +1,39 @@
+:root {
+  /* Palette de couleurs - Nouvelle DA Cinématographique */
+  --color-bg: #080608;              /* Teinte rouge très subtile/noir */
+  --color-surface: #150C0E;         /* Noir bordeaux profond */
+  --color-accent: #C1121F;          /* Rouge sang, sombre et sérieux */
+  --color-accent-hover: #E63946;    /* Rouge vif pour les interactions */
+  --color-gold: #D4A017;            /* Or foncé pour les notes/étoiles */
+  --color-blue: #1B3A4B;            /* Bleu pétrole (complément froid) pour les badges */
+  --color-text: #F5E6E8;            /* Blanc légèrement rosé (primaire) */
+  --color-muted: #9E7C82;           /* Gris-mauve désaturé (secondaire) */
+  --color-border: rgba(193, 18, 31, 0.15); /* Rouge transparent */
+
+  /* Typographie */
+  --font-heading: 'Bebas Neue', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Spacing et Layout */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Z-Index */
+  --z-nav: 100;
+  --z-dropdown: 200;
+  --z-modal-backdrop: 1000;
+  --z-modal-content: 1010;
+}
